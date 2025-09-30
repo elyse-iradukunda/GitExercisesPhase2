@@ -915,5 +915,26 @@ user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|MERGING)
 $
 
 ```
+ ## Branch Deletion
+
+ ```
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git branch -d ft/new-feature
+Deleted branch ft/new-feature (was dbd33a1).
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git push origin --delete ft/new-feature
+To https://github.com/elyse-iradukunda/GitExercisesPhase2.git
+ - [deleted]         ft/new-feature
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ 
+ ```
+
+ ## Creating a Brancch from a Commit
+
+ ```
  
+ ```
 ```
