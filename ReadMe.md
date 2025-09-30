@@ -983,5 +983,43 @@ No files need merging
 user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
 ```
 ## Ignoring Files/Directories
+## Tags in Git
+```
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git tag v1.0
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git tag
+v1.0
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git tag -d vi.0
+error: tag 'vi.0' not found.
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was 64a234c)
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ 
+```
+## Pushing and pulling 
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git pull origin main
+From https://github.com/elyse-iradukunda/GitExercisesPhase2
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git push origin main
+Everything up-to-date
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ 
+
+// last changes is here!!
+
 
 ```
