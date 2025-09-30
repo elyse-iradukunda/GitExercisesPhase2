@@ -204,9 +204,367 @@ user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
 
 ```
   
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+error: Your local changes to the following files would be overwritten by checkout:
+        ReadMe.md
+        test5.dm
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git push origin main
+Enumerating objects: 28, done.
+Counting objects: 100% (27/27), done.
+To https://github.com/elyse-iradukunda/GitExercisesPhase2.git
+   d7b7b55..ba67a52  main -> main
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+error: Your local changes to the following files would be overwritten by checkout:
+        ReadMe.md
+        test5.dm
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m'change here is made'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ReadMe.md
+        modified:   test5.dm
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add .
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m'change here is made'
+[main f73fce7] change here is made
+ 2 files changed, 36 insertions(+), 2 deletions(-)  
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+Switched to branch 'ft/branch'
+Your branch is up to date with 'origin/ft/branch'.  
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git add test5.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git commit -m'Implement test5.dm file'
+[ft/branch 5467408] Implement test5.dm file
+ 1 file changed, 1 insertion(+), 1 deletion(-)      
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+Auto-merging test5.dm
+CONFLICT (content): Merge conflict in test5.dm
+error: could not apply 5467408... Implement test5.dm file
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|CHERRY-PICKING)
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+
+```
+# Visualizing Commit History (Bonus)
+
+``
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+error: Your local changes to the following files would be overwritten by checkout:
+        ReadMe.md
+        test5.dm
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git push origin main
+Enumerating objects: 28, done.
+Counting objects: 100% (27/27), done.
+To https://github.com/elyse-iradukunda/GitExercisesPhase2.git
+   d7b7b55..ba67a52  main -> main
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+error: Your local changes to the following files would be overwritten by checkout:
+        ReadMe.md
+        test5.dm
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m'change here is made'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ReadMe.md
+        modified:   test5.dm
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add .
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m'change here is made'
+[main f73fce7] change here is made
+ 2 files changed, 36 insertions(+), 2 deletions(-)  
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+Switched to branch 'ft/branch'
+Your branch is up to date with 'origin/ft/branch'.  
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git add test5.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git commit -m'Implement test5.dm file'
+[ft/branch 5467408] Implement test5.dm file
+ 1 file changed, 1 insertion(+), 1 deletion(-)      
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+Auto-merging test5.dm
+CONFLICT (content): Merge conflict in test5.dm
+error: could not apply 5467408... Implement test5.dm file
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|CHERRY-PICKING)
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+error: could not apply 5467408... Implement test5.dm file
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|CHERRY-PICKING)
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|CHERRY-PICKING)
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git reset
+Unstaged changes after reset:
+M       ReadMe.md
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git log --oneline --graph --all
+* 99bf625 (HEAD -> main) Implement test5.dm file
+* f73fce7 change here is made
+* ba67a52 (origin/main, origin/HEAD) Unwanted commit
+* 730d1d6 added 5th and read me file
+* b7eb315 adding 4th file
+* 94c280a add test4.dm with description
+* 9051ca5 chore: Create third file
+* a8e129d chore: Create second file
+* c613a5b chore: Create initial file additional text
+*   d7b7b55 Merge branch 'main' of https://github.com/elyse-iradukunda/GitExercisesPhase2
+|\
+| *   7e55fcd Merge pull request #1 from elyse-iradukunda/ft/branch
+| |\
+* | | 2f416dd chore: adding read me file  with answers to git exercises
+|/ /
+* | c4b4a39 chore:Implemented test 5
+| | * 5467408 (ft/branch) Implement test5.dm file
+| |/
+| * 226a125 (origin/ft/branch) Prepare for pull request
+| * c62ab5a chore:Implemented test 5
+|/
+* ebf8e4e Creating fourth file
+* 3563ea5 fix: forgotten to commit test4.dm
+* 8afa30b chore: Creating another file
+* 9d51a7b chore: Creating initial file
+(END)
+``
+# Reflogs
 
 ```
 
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+error: Your local changes to the following files would be overwritten by checkout:
+        ReadMe.md
+        test5.dm
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git push origin main
+Enumerating objects: 28, done.
+Counting objects: 100% (27/27), done.
+To https://github.com/elyse-iradukunda/GitExercisesPhase2.git
+   d7b7b55..ba67a52  main -> main
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+error: Your local changes to the following files would be overwritten by checkout:
+        ReadMe.md
+        test5.dm
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m'change here is made'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ReadMe.md
+        modified:   test5.dm
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add .
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m'change here is made'
+[main f73fce7] change here is made
+ 2 files changed, 36 insertions(+), 2 deletions(-)  
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/branch
+Switched to branch 'ft/branch'
+Your branch is up to date with 'origin/ft/branch'.  
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git add test5.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git commit -m'Implement test5.dm file'
+[ft/branch 5467408] Implement test5.dm file
+ 1 file changed, 1 insertion(+), 1 deletion(-)      
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+Auto-merging test5.dm
+CONFLICT (content): Merge conflict in test5.dm
+error: could not apply 5467408... Implement test5.dm file
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|CHERRY-PICKING)
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+error: could not apply 5467408... Implement test5.dm file
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|CHERRY-PICKING)
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|CHERRY-PICKING)
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+$ git cherry-pick --continue
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git reset
+Unstaged changes after reset:
+M       ReadMe.md
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git log --oneline --graph --all
+* 99bf625 (HEAD -> main) Implement test5.dm file
+* f73fce7 change here is made
+* ba67a52 (origin/main, origin/HEAD) Unwanted commit
+* 730d1d6 added 5th and read me file
+* b7eb315 adding 4th file
+* 94c280a add test4.dm with description
+* 9051ca5 chore: Create third file
+* a8e129d chore: Create second file
+* c613a5b chore: Create initial file additional text
+*   d7b7b55 Merge branch 'main' of https://github.com/elyse-iradukunda/GitExercisesPhase2
+|\
+| *   7e55fcd Merge pull request #1 from elyse-iradukunda/ft/branch
+| |\
+* | | 2f416dd chore: adding read me file  with answers to git exercises
+|/ /
+* | c4b4a39 chore:Implemented test 5
+| | * 5467408 (ft/branch) Implement test5.dm file
+| |/
+| * 226a125 (origin/ft/branch) Prepare for pull request
+| * c62ab5a chore:Implemented test 5
+|/
+* ebf8e4e Creating fourth file
+* 3563ea5 fix: forgotten to commit test4.dm
+* 8afa30b chore: Creating another file
+* 9d51a7b chore: Creating initial file
+(END)
+```
  create mode 100644 test5.dm
 
 user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
@@ -457,4 +815,105 @@ $ git log --oneline --graph --decorate
 * 9d51a7b chore: Creating initial file
 
 user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
+
+
+### Branching Basics (10 challenges)
+
+## Feature Branch Creation:
+
+```
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-feature)
+$ git add feature.txt
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-feature)
+$ git commit -m'Implemented core functionality for new feature'
+[ft/new-feature 013bf9a] Implemented core functionality for new feature
+ 2 files changed, 359 insertions(+)
+ create mode 100644 feature.txt
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-feature)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        ReadMe.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-feature)
+$ git commit -m'Implemented core functionality for new feature'
+On branch ft/new-feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   ReadMe.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-feature)
+$ git add ReadMe.md
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-feature)
+$ git commit -m'added read me as well'
+[ft/new-feature dbd33a1] added read me as well
+ 1 file changed, 10 insertions(+)
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.       
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add readme.txt
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m'Updated project readme'
+[main cc6afb7] Updated project readme
+ 1 file changed, 0 insertions(+), 0 deletions(-)    
+ create mode 100644 readme.txt
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git push origin ft/new-feature
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+ExercisesPhase2/pull/new/ft/new-feature
+remote:
+To https://github.com/elyse-iradukunda/GitExercisesPhase2.git
+ * [new branch]      ft/new-feature -> ft/new-feature
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git pull origin main
+From https://github.com/elyse-iradukunda/GitExercisesPhase2
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git pull
+fatal: unable to access 'https://github.com/elyse-iradukunda/GitExercisesPhase2.git/': Could not resolve host: github.com
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 903 bytes | 451.00 KiB/s, done.
+From https://github.com/elyse-iradukunda/GitExercisesPhase2
+ * branch            main       -> FETCH_HEAD       
+   99bf625..00304fc  main       -> origin/main      
+hint: Waiting for your editor to close the file... Vim: Error reading input, exiting...
+Vim: Finished.
+error: there was a problem with the editor 'vi'     
+Not committing merge; use 'git commit' to complete the merge.
+
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main|MERGING)
+$
+
+```
+ 
 ```
