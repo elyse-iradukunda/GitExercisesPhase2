@@ -172,7 +172,41 @@ Date:   Mon Sep 29 20:02:36 2025 +0200
 
 ```
 
-# 
+# Keeping History tidy - squashing commits
+
+```
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add unwanted.txt
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m'Unwanted commit'
+[main 0fe6752] Unwanted commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)    
+ create mode 100644 unwanted.txt
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git rebase -i HEAD~2
+error: Your local changes to the following files would be overwritten by checkout:
+        ReadMe.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+error: could not detach HEAD
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/main.
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+```
+
+# Splitting a Commit
+
+```
+  
+
+```
+
  create mode 100644 test5.dm
 
 user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
