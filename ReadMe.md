@@ -932,9 +932,32 @@ user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
 $ 
  ```
 
- ## Creating a Brancch from a Commit
+ ## Creating a Brancch from a Commit and remaming
 
  ```
  
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/new-branch-from-commit 
+Switched to branch 'ft/new-branch-from-commit'
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-branch-from-commit)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.      
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/new-branch-from-commit)
+$ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/improved-branch-name)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git push
+Everything up-to-date
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git checkout ft/improved-branch-name 
+Switched to branch 'ft/improved-branch-name'
  ```
 ```
