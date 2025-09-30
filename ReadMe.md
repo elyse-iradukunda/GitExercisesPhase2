@@ -1,6 +1,178 @@
 ### My answers to git exercises
 
+## Getting Started
 ```
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add test1.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m "chore: Create initial file additional text"
+[main c613a5b] chore: Create initial file additional text
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add test2.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m "chore: Create second file"
+[main a8e129d] chore: Create second file
+ 1 file changed, 1 insertion(+)
+
+n)
+$ git commit -m "chore: Create third file"
+[main 9051ca5] chore: Create third file
+ 1 file changed, 1 insertion(+)
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add test4.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m "chore: Create fourth file"
+[main 7ccab44] chore: Create fourth file
+ 1 file changed, 1 insertion(+)
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+```
+## Challenges: 
+# part 1 : Refining Git history (10 challenges)
+```
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add test1.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m "chore: Create initial file additional text"
+[main c613a5b] chore: Create initial file additional text
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add test2.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m "chore: Create second file"
+[main a8e129d] chore: Create second file
+ 1 file changed, 1 insertion(+)
+
+n)
+$ git commit -m "chore: Create third file"
+[main 9051ca5] chore: Create third file
+ 1 file changed, 1 insertion(+)
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git add test4.dm
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git commit -m "chore: Create fourth file"
+[main 7ccab44] chore: Create fourth file
+ 1 file changed, 1 insertion(+)
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)     
+        modified:   ReadMe.md
+        modified:   test5.dm
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git log
+commit 7ccab44b20fb13fc77c26ea6c32f4e741a05e9b5 (HEAD -> main)
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 16:11:10 2025 +0200
+
+    chore: Create fourth file
+
+commit 9051ca53e0e002a773892be24730ebd175424451
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 16:09:59 2025 +0200
+
+    chore: Create third file
+
+commit a8e129ddbffec7072692f3e874416cd06884f8e6
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 16:09:24 2025 +0200
+
+    chore: Create second file
+
+commit c613a5ba1cee6769abe4e53a8cf3bad2f4a20f3b
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 16:07:20 2025 +0200
+
+    chore: Create initial file additional text
+
+commit d7b7b55dbe50fc12af3122779497668634dbf363 (origin/main, origin/HEAD)  
+Merge: 2f416dd 7e55fcd
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 14:13:49 2025 +0200
+
+    Merge branch 'main' of https://github.com/elyse-iradukunda/GitExercisesPhase2
+
+commit 2f416dd2b323b310c5f7a86ec7d7eb4516a0036b
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 14:08:31 2025 +0200
+
+    chore: adding read me file  with answers to git exercises
+
+commit 7e55fcdb21ed591a1895cf7ccfe0cf94a3f9612b
+Merge: c4b4a39 226a125
+Author: Elyse Iradukunda <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 13:50:44 2025 +0200
+
+    Merge pull request #1 from elyse-iradukunda/ft/branch
+
+    Ft/branch
+
+commit 226a12560c6efd1451c373b3d87ac8b71bc91095 (origin/ft/branch, ft/branch)
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 13:49:30 2025 +0200
+
+    Prepare for pull request
+
+commit c4b4a3992697d676c8a2b3f2e1e6c3aa5d40291e
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 08:11:59 2025 +0200
+
+    chore:Implemented test 5
+
+commit c62ab5a64b049734e1284ac78b22f2c71a105920
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 08:11:59 2025 +0200
+
+    chore:Implemented test 5
+
+commit ebf8e4ed3980175067ec49eed26312696ab7d0b6
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Tue Sep 30 07:43:36 2025 +0200
+
+    Creating fourth file
+
+commit 3563ea5a0890256b421f59716f9695326afeac8f
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Mon Sep 29 20:04:27 2025 +0200
+
+    fix: forgotten to commit test4.dm
+
+commit 8afa30b0fe3d0759cd0fd134f2aa384ccc7cdd08
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Mon Sep 29 20:04:03 2025 +0200
+
+    chore: Creating another file
+
+commit 9d51a7baf684d1432e7fadf1416f5731c02dc75e
+Author: Irael <ellycreativity8@gmail.com>
+Date:   Mon Sep 29 20:02:36 2025 +0200
+
+    chore: Creating initial file
+
+```
+
+# 
  create mode 100644 test5.dm
 
 user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (ft/branch)
