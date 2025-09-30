@@ -935,6 +935,30 @@ $
  ## Creating a Brancch from a Commit
 
  ```
+ user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git stash
+Saved working directory and index state WIP on main: 03f819d solution from Deleting branch
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git stash list
+stash@{0}: WIP on main: 03f819d solution from Deleting branch
  
  ```
+ ## Resolving Merge conflicts with a Merge Tool
+```
+
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+No files need merging
+
+user@Irael MINGW64 /d/Coding/GitExercisesPhase2 (main)
+```
+## Ignoring Files/Directories
+
 ```
